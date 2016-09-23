@@ -798,6 +798,22 @@ Info: The package seems to declare a relation on libdb1-compat.
  glibc 2.0 or 2.1. There is intentionally no corresponding development
  package. Do not link new applications against this library!
 
+Tag: depends-directly-on-a-mysql-package
+Severity: normal
+Certainty: certain
+Ref: https://lists.debian.org/debian-devel-announce/2016/09/msg00000.html
+Info: The package depends directly on a MySQL package.
+ It should depend on default-mysql-* instead, which can be provided by
+ MySQL or MariaDB packages.
+
+Tag: build-depends-directly-on-libmysqlclient-dev-package
+Severity: normal
+Certainty: certain
+Ref: https://lists.debian.org/debian-devel-announce/2016/09/msg00000.html
+Info: The package depends directly on the libmysqlclient-dev package.
+ It should depend on default-libmysqlclient-dev instead, which can be provided by
+ MySQL or MariaDB packages.
+
 Tag: depends-on-python-minimal
 Severity: important
 Certainty: certain

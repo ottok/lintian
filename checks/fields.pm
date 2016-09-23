@@ -815,6 +815,11 @@ sub run {
                         && $pkg !~ /^libc(?:6|6.1|0.3)/
                         && $field =~ m/^(?:pre-)?depends$/o);
 
+                    tag 'depends-directly-on-a-mysql-package',
+                      "$field: $part_d_orig",
+                      if ( $d_pkg =~ /^(?:mysql-server|mysql-server-core|mysql-client|mysql-client-core)$/
+                        && &$is_dep_field($field));
+
                     tag 'depends-on-python-minimal', $field,
                       if ( $d_pkg =~ /^python[\d.]*-minimal$/
                         && &$is_dep_field($field)
@@ -1012,6 +1017,11 @@ sub run {
 
                         if ($d_pkg eq 'java-compiler'){
                             tag 'build-depends-on-an-obsolete-java-package',
+                              $d_pkg;
+                        }
+
+                        if ($d_pkg eq 'libmysqlclient-dev'){
+                            tag 'build-depends-directly-on-libmysqlclient-dev-package',
                               $d_pkg;
                         }
 
