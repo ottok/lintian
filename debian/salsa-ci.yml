@@ -14,6 +14,7 @@ build-trixie-backports:
     RELEASE: 'trixie-backports'
     DEB_BUILD_OPTIONS: 'nocheck'
   extends: .build-package
+  # Re-enable this once dpkg vXXX is available in trixie-backports
   allow_failure: true
 
 variables:
@@ -24,7 +25,7 @@ variables:
 
 # Run additional Lintian check using latest version from git
 lintian-git:
-  extends: .test-autopkgtest
+  extends: .test-lintian
   before_script:
   - apt-get update
   - apt-get install -y dpkg/unstable
