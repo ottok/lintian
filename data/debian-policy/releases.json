@@ -8,6 +8,39 @@
          "author" : "Sean Whitton <spwhitton@spwhitton.name>",
          "changes" : [
             "",
+            "debian-policy (4.7.4.0) unstable; urgency=medium",
+            "",
+            "  * Policy: Clarify requirements for systemd service hardening",
+            "    Wording: Sean Whitton <spwhitton@spwhitton.name>",
+            "    Seconded: Chris Hofstaedtler <zeha@debian.org>",
+            "    Seconded: Holger Levsen <holger@layer-acht.org>",
+            "    Closes: #1120001",
+            "  * Policy: Update documentation for debian/control Format field",
+            "    Wording: Russ Allbery <rra@debian.org>",
+            "    Seconded: Sean Whitton <spwhitton@spwhitton.name>",
+            "    Seconded: Jochen Sprickerhof <jspricke@debian.org>",
+            "    Closes: #1120002",
+            "  * Policy: Recommend use of debhelper-compat for compatibility levels",
+            "    Wording: Sean Whitton <spwhitton@spwhitton.name>",
+            "    Seconded: Mattia Rizzolo <mattia@debian.org>",
+            "    Seconded: gregor herrmann <gregoa@debian.org>",
+            "    Closes: #1120003",
+            "  * Fix minor wording issue in 10.1 regarding /usr/local permissions",
+            "  * Update upgrading checklist for 4.7.4 release"
+         ],
+         "closes" : [
+            1120001,
+            1120002,
+            1120003
+         ],
+         "epoch" : 1767495952,
+         "timestamp" : "2026-01-15T10:00:00Z",
+         "version" : "4.7.4.0"
+      },
+      {
+         "author" : "Sean Whitton <spwhitton@spwhitton.name>",
+         "changes" : [
+            "",
             "debian-policy (4.7.3.0) unstable; urgency=medium",
             "",
             "  * Policy: Document range of subordinate user IDs",
